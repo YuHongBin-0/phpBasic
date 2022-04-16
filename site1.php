@@ -127,6 +127,7 @@ echo "Checkbox info <br>";
     echo $fruits[1];
 ?>
 
+<!------------------- Checkbox ends here -------------------- -->
 
 
 
