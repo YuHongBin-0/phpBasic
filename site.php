@@ -155,36 +155,55 @@ echo substr($phrase1, 3, 8);
 
 <?php
 
-
     echo "<hr>";
     echo "Getting User Input <br>";
+
 ?>
 
+<form action="site.php" method="get">
+    Name: <input type="text" name="nameID" > <br>
+    Age: <input type="number" name="ageID" >
+    <input type="submit">
+</form>
+
+<br>
+
+Your name is : <?php echo $_GET["nameID"] ?>
+<br>
+Your age is : <?php echo $_GET["ageID"] ?>
+
+<!------------------------------------ USER INPUT ENDS HERE ---------------------------------->
 
 
 
 
 <?php
-
+    echo "<hr>";
+    echo "Building a basic calculator <br>";
 ?>
 
+<form action="site.php" method="get">
+    <input type="number" name="num1">
+    <br>
+    <input type="number" name="num2">
+    <br>
+    <input type="submit">
+</form>
 
+    Answer / Result : <?php echo $_GET["num1"] + $_GET["num2"] ?>
 
-
+<!------------------------------------ Calculator ENDS HERE ---------------------------------->
 
 
 <?php
-
+    echo "<hr>";
+    echo "Building a Mad Libs game <br>";
 ?>
 
-
-
-
-
-
-<?php
-
-?>
+<form action="site.php" method="get">
+    
+    <input type="submit">
+</form>
 
 
 
