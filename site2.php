@@ -135,6 +135,87 @@
 ?>
 
 
+<!-- better calculator   below this line -->
+
+<form action="site2.php" method="post">
+    <!-- use step for decimal points -->
+    first num: <input type="number" step="0.1" name="numb1"> <br>
+    OP: <input type="text" name="op"> <br>
+    first num: <input type="number" name="numb2"> <br>
+<input type="submit">
+
+</form>
+
+<?php 
+
+    $numb1 = $_POST["numb1"];
+    $numb2 = $_POST["numb2"];
+    $op = $_POST["op"];
+
+    if($op == "+"){
+        echo $numb1 + $numb2;
+    } elseif($op == "-"){
+        echo $numb1 - $numb2;
+    } elseif($op == "*"){
+        echo $numb1 * $numb2;
+    } elseif($op == "/"){
+        echo $numb1 / $numb2;
+    } else {
+        echo "Error : Invalid Operator";
+    }
+
+?>
+
+
+<!-- switch statement-similar to if , when theres alot situation   below this line -->
+<hr>
+<br>
+
+    <form action="site2.php" method="post">
+        what was your grade
+        <input type="text" name="grade">
+        <input type="submit">
+</form>
+
+<?php 
+    $grade = $_POST["grade"];
+    echo $grade;
+    echo "<br>";
+    switch($grade){
+        case "A":
+            echo "You did amazing : A";
+            break;
+
+        case "B" :
+            echo "You did pretty good : B";
+            break;
+
+        case "C" :
+            echo "You did quite good : C";
+            break;
+
+        case "D" :
+            echo "Can do better : D";
+            break;
+
+        case "E" :
+            echo "You did poorly : E";
+            break;
+
+        case "F" :
+            echo "You failed : F";
+            break;
+
+
+        default:
+            echo "Invalid grade";
+    }
+
+?>
+
+
+
+
 
 
     </body>
